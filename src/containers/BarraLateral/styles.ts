@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import variaveis from '../../styles/variaveis'
-import { Titulo } from '../../styles'
+import { Botao, Titulo } from '../../styles'
 
 export const Aside = styled.aside`
   height: 100vh;
@@ -15,21 +15,6 @@ export const Campo = styled.input`
   border-radius: 15px;
   margin-top: 20px;
   padding: 8px;
-`
-
-export const Botao = styled.button`
-  border-radius: 20px;
-  background-color: ${variaveis.verde};
-  width: 10vw;
-  height: 4.5vh;
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  margin-top: 80vh;
-
-  &: hover {
-    background-color: ${variaveis.verde2};
-  }
 `
 
 export const BotaoVoltar = styled(Botao)`

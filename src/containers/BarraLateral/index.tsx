@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import * as S from './styles'
+import { Botao } from '../../styles'
 
 type Props = {
   mostraBarra: boolean
@@ -17,9 +18,9 @@ const BarraLateral = ({ mostraBarra }: Props) => {
       {mostraBarra ? (
         <>
           <S.Campo placeholder="digite o nome do produto" />
-          <S.Botao onClick={() => navigate('/cadastro')} type="button">
+          <Botao onClick={() => navigate('/cadastro')} type="button">
             Adicionar
-          </S.Botao>
+          </Botao>
         </>
       ) : (
         <S.BotaoVoltar onClick={() => navigate('/')}>

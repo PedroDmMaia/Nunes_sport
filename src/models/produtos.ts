@@ -2,7 +2,7 @@ class Produto {
   id: number
   nome: string
   codigo: number
-  dscricao: string
+  descricao: string
   preco: number
 
   constructor(
@@ -15,7 +15,7 @@ class Produto {
     this.id = id
     this.nome = nome
     this.codigo = codigo
-    this.dscricao = descricao
+    this.descricao = descricao
     this.preco = preco
   }
 }

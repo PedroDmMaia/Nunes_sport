@@ -9,10 +9,24 @@ const initialState: Produtostate = {
   itens: [
     {
       id: 1,
-      nome: 'camiseta',
+      nome: 'Camiseta',
       codigo: 234567,
-      dscricao: 'camiseta de algodão',
-      preco: 130.9
+      descricao: 'camiseta de algodão',
+      preco: 149.9
+    },
+    {
+      id: 2,
+      nome: 'Bermuda',
+      codigo: 239856,
+      descricao: 'bermuda',
+      preco: 199.9
+    },
+    {
+      id: 3,
+      nome: 'Tênis',
+      codigo: 8652188,
+      descricao: 'Tenis para corrida',
+      preco: 249.9
     }
   ]
 }
