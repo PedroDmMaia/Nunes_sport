@@ -19,7 +19,7 @@ const Produto = ({
 }: Props) => {
   const [nome, setNome] = useState('')
   const [descricao, setDescricao] = useState('')
-  const [preco, setPreco] = useState(0)
+  const [preco, setPreco] = useState('') // Alterado para string
 
   const [estaEditando, setEstaeditando] = useState(false)
   const [corCard, setCorCard] = useState('transparent')
@@ -34,7 +34,7 @@ const Produto = ({
     ) {
       setNome(nomeOriginal)
       setDescricao(descricaoOriginal)
-      setPreco(precoOriginal)
+      setPreco(precoOriginal.toString()) // Convertido para string para manter a precisão dos decimais
     }
   }, [nomeOriginal, descricaoOriginal, precoOriginal])
 
@@ -53,7 +53,7 @@ const Produto = ({
 
     setNome(nomeOriginal)
     setDescricao(descricaoOriginal)
-    setPreco(precoOriginal)
+    setPreco(precoOriginal.toString()) // Convertido para string
   }
 
   const salvaEdicao = () => {
@@ -64,7 +64,7 @@ const Produto = ({
         nome,
         codigo,
         descricao,
-        preco
+        preco: parseFloat(preco) // Convertido para float antes de enviar para o redux
       })
     )
     setEstaeditando(false)
@@ -87,7 +87,7 @@ const Produto = ({
         <S.CampoInput
           value={preco}
           disabled={!estaEditando}
-          onChange={({ target }) => setPreco(Number(target.value))}
+          onChange={({ target }) => setPreco(target.value)} // Mantém o valor como string para permitir decimais
           cor={corCard}
         />
         {estaEditando && (

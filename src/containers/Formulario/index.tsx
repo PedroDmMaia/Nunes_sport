@@ -68,7 +68,7 @@ const Formulario = () => {
             placeholder="ex: 149.9"
             type="text"
             id="preco"
-            value={isNaN(preco) || preco === 0 ? '' : preco}
+            value={preco}
             onChange={({ target }) => setPreco(Number(target.value))}
           />
         </S.Campo>
