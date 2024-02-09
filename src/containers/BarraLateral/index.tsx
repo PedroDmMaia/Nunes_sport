@@ -17,7 +17,6 @@ const BarraLateral = ({ mostraBarra }: Props) => {
       </S.TituloPrincipal>
       {mostraBarra ? (
         <>
-          <S.Campo placeholder="digite o nome do produto" />
           <Botao onClick={() => navigate('/cadastro')} type="button">
             Adicionar
           </Botao>
